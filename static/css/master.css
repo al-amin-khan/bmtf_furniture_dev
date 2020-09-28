@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: #f7fbff;
+
+  /* for sticky footer */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  /* for sticky footer end */
+}
+/* for sticky footer */
+main {
+  flex: 1 0 auto;
+  }
+/* for sticky footer end */
+
+
+
+/* menubar text color */
+nav ul li a {
+  color: black;
+}
+
+div.row{
+  margin-bottom: 2px;
+}
+
+div.row.menu-height{
+  height: 43px !important;
+  line-height: 43px !important;
+}
+
+
+/* menubar center */
+.second-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* top border for menubar */
+#row {
+  border-top: 1px solid #e9e5e5;
+}
+
+/* menubar height  */
+
+/* cart badge */
+.badge-padding {
+  padding: 10px 0px 0px 0px;
+}
+
+/* call icon inline */
+.call{
+  display: inline-block;
+  margin-bottom: -2px;
+}
+
+
+
+/* cart-item-count-badge */
+.notification-badge {
+    display: inline;
+    position:relative;
+    right: -15px;
+    top: -50px;
+    color: #941e1e;
+    background-color: #f5f1f2;
+    margin: 0 -.8em;
+    border-radius: 50%;
+    padding: 5px 10px;
+    line-height: normal;
+    font-weight: bold;
+}
+.cart-icon{
+  line-height: 0px;
+  height:0px;
+}
+
+/* .cart{
+  line-height: 0px;
+  height: 0px;
+} */
+/* cart-item-count-badge end */
+
+
+/* address info */
+#contact-us{
+  margin-bottom: -1.3rem;
+}
+
+blockquote{
+  border-left: 2px solid #9b9898 !important;
+  margin-left: 8pt !important;
+  padding-left: 2.1rem !important;
+}
+/* address info end */
+
+
+.dropdown-content.sec-menu{
+    top: 44px !important;
+    min-width: 100%;
+    left: 0 !important;
+    transform: none !important;
+}
+
+.dropdown-content.cart-button{
+    top: 44px !important;
+    right: 170 !important;
+    min-width: 400px;
+}
+
+
+/* searchbar */
+/* searchbar end */
+
+/* cart */
+.divider{
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.title-with-price, .cart-pic{
+  /* height: 0; */
+  margin: 0;
+  line-height: 15px;
+  padding: 0;
+}
+
+
+.deliver-and-total{
+  line-height: 20px !important;
+}
+
+/* cart end */
+
+
+/* lightslider */
+#image-gallery{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+/* lightslider end */
+
+/* quantity dropdown */
+#quantity{
+  margin-top: 5px;
+}
+
+option{
+  line-height: 0 !important;
+}
+/* quantity dropdown end */
+
+
+/* search input */
+
+/* search input end */
