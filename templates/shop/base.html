@@ -1,0 +1,852 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BMTF Furniture</title>
+
+  <link rel="shortcut icon" href="{% static "image/bmtf.ico" %}">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!-- material icon -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- custom css -->
+  <link rel="stylesheet" href="{% static "css/master.css" %}">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static "css/materialize.css" %}">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  {% block navbar_block %}
+  <nav class="white nav-extended z-depth-3 ">
+    <div class="nav-wrapper container">
+      <div class="brand-logo center">
+        <img class="responsive-img" src="{% static "images/bmtf-logo.png" %}" alt="BMTF">
+      </div>
+      <div class="left black-text hide-on-small-and-down logo ">
+        <img class="call" src="https://img.icons8.com/ios-filled/14/000000/phone-disconnected.png">
+        01712-3456789
+      </div>
+
+      <ul id="nav-mobile" class="right right-align hide-on-small-and-down">
+        <li class="black-text">
+          <a class="dropdown-trigger search" href="#!" data-target="search-box" data-beloworigin="true">
+            <i class="material-icons black-text ">search</i>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger cart-icon" href="#!" data-target="dropdown-cart" data-beloworigin="true">
+            <i class="material-icons black-text ">shopping_cart</i>
+            <small class="notification-badge">2</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- search-box -->
+    <div id='search-box' class="card-panel grey lighten-5 z-depth-1 black-text left-align dropdown-content pause-dropdown cart-button">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">search</i>
+              <input type="text" id="autocomplete-input" class="autocomplete" placeholder="search here...">
+              <label for="autocomplete-input">Search</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search-box end -->
+
+
+    <!-- Menu -->
+    <div id="row" class="row center hide-on-small-only menu-height">
+      <div class="nav-wrapper container">
+        <ul id="nav-mobile" class="second-menu hide-on-small-and-down">
+          <li><a href="#!">New</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1" data-beloworigin="true" data-activates='living'>Living</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2" data-beloworigin="true" data-activates='bedroom'>Bedroom</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown3" data-beloworigin="true" data-activates='dining'>Dining</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown4" data-beloworigin="true" data-activates='kitchen'>kitchen</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown5" data-beloworigin="true" data-activates='door'>Door</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown6" data-beloworigin="true" data-activates='medical'>Medeical</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown7" data-beloworigin="true" data-activates='interior'>Interior</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown8" data-beloworigin="true" data-activates='office'>Office</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- dropdown1 for living -->
+    <ul id="dropdown1" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 1</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 1</a>
+            <a href="#!" class="grey-text text-darken-3">Link 2</a>
+            <a href="#!" class="grey-text text-darken-3">Link 3</a>
+            <a href="#!" class="grey-text text-darken-3">Link 4</a>
+
+            <a href="#!" class="grey-text text-darken-3">Link 5</a>
+            <a href="#!" class="grey-text text-darken-3">Link 6</a>
+            <a href="#!" class="grey-text text-darken-3">Link 7</a>
+            <a href="#!" class="grey-text text-darken-3">Link 8</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 2</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 9</a>
+            <a href="#!" class="grey-text text-darken-3">Link 10</a>
+            <a href="#!" class="grey-text text-darken-3">Link 11</a>
+            <a href="#!" class="grey-text text-darken-3">Link 12</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 3</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 13</a>
+            <a href="#!" class="grey-text text-darken-3">Link 14</a>
+            <a href="#!" class="grey-text text-darken-3">Link 15</a>
+            <a href="#!" class="grey-text text-darken-3">Link 16</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+    <!-- dropdown2 for bedroom -->
+    <ul id="dropdown2" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 4</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 17</a>
+            <a href="#!" class="grey-text text-darken-3">Link 18</a>
+            <a href="#!" class="grey-text text-darken-3">Link 19</a>
+            <a href="#!" class="grey-text text-darken-3">Link 20</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 5</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 21</a>
+            <a href="#!" class="grey-text text-darken-3">Link 22</a>
+            <a href="#!" class="grey-text text-darken-3">Link 23</a>
+            <a href="#!" class="grey-text text-darken-3">Link 24</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 6</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 25</a>
+            <a href="#!" class="grey-text text-darken-3">Link 26</a>
+            <a href="#!" class="grey-text text-darken-3">Link 27</a>
+            <a href="#!" class="grey-text text-darken-3">Link 28</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+
+    <!-- dropdown3 for dining -->
+    <ul id="dropdown3" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 7</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 29</a>
+            <a href="#!" class="grey-text text-darken-3">Link 30</a>
+            <a href="#!" class="grey-text text-darken-3">Link 31</a>
+            <a href="#!" class="grey-text text-darken-3">Link 32</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 8</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 33</a>
+            <a href="#!" class="grey-text text-darken-3">Link 34</a>
+            <a href="#!" class="grey-text text-darken-3">Link 35</a>
+            <a href="#!" class="grey-text text-darken-3">Link 36</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 9</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 37</a>
+            <a href="#!" class="grey-text text-darken-3">Link 38</a>
+            <a href="#!" class="grey-text text-darken-3">Link 39</a>
+            <a href="#!" class="grey-text text-darken-3">Link 40</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+
+    <!-- dropdown4 for kitchen -->
+    <ul id="dropdown4" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 10</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 41</a>
+            <a href="#!" class="grey-text text-darken-3">Link 42</a>
+            <a href="#!" class="grey-text text-darken-3">Link 43</a>
+            <a href="#!" class="grey-text text-darken-3">Link 44</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 11</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 45</a>
+            <a href="#!" class="grey-text text-darken-3">Link 46</a>
+            <a href="#!" class="grey-text text-darken-3">Link 47</a>
+            <a href="#!" class="grey-text text-darken-3">Link 48</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 12</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 49</a>
+            <a href="#!" class="grey-text text-darken-3">Link 50</a>
+            <a href="#!" class="grey-text text-darken-3">Link 51</a>
+            <a href="#!" class="grey-text text-darken-3">Link 52</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+    <!-- dropdown5 for door -->
+    <ul id="dropdown5" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 13</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 54</a>
+            <a href="#!" class="grey-text text-darken-3">Link 55</a>
+            <a href="#!" class="grey-text text-darken-3">Link 56</a>
+            <a href="#!" class="grey-text text-darken-3">Link 57</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 14</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 58</a>
+            <a href="#!" class="grey-text text-darken-3">Link 59</a>
+            <a href="#!" class="grey-text text-darken-3">Link 60</a>
+            <a href="#!" class="grey-text text-darken-3">Link 61</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 15</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 62</a>
+            <a href="#!" class="grey-text text-darken-3">Link 63</a>
+            <a href="#!" class="grey-text text-darken-3">Link 64</a>
+            <a href="#!" class="grey-text text-darken-3">Link 65</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+    <!-- dropdown6 for medical -->
+    <ul id="dropdown6" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 16</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 66</a>
+            <a href="#!" class="grey-text text-darken-3">Link 67</a>
+            <a href="#!" class="grey-text text-darken-3">Link 68</a>
+            <a href="#!" class="grey-text text-darken-3">Link 69</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 17</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 70</a>
+            <a href="#!" class="grey-text text-darken-3">Link 71</a>
+            <a href="#!" class="grey-text text-darken-3">Link 72</a>
+            <a href="#!" class="grey-text text-darken-3">Link 73</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 18</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 74</a>
+            <a href="#!" class="grey-text text-darken-3">Link 75</a>
+            <a href="#!" class="grey-text text-darken-3">Link 76</a>
+            <a href="#!" class="grey-text text-darken-3">Link 77</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+
+    <!-- dropdown7 for interior -->
+    <ul id="dropdown7" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 19</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 78</a>
+            <a href="#!" class="grey-text text-darken-3">Link 79</a>
+            <a href="#!" class="grey-text text-darken-3">Link 80</a>
+            <a href="#!" class="grey-text text-darken-3">Link 81</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 20</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 82</a>
+            <a href="#!" class="grey-text text-darken-3">Link 82</a>
+            <a href="#!" class="grey-text text-darken-3">Link 84</a>
+            <a href="#!" class="grey-text text-darken-3">Link 85</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 21</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 86</a>
+            <a href="#!" class="grey-text text-darken-3">Link 87</a>
+            <a href="#!" class="grey-text text-darken-3">Link 88</a>
+            <a href="#!" class="grey-text text-darken-3">Link 89</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+
+    <!-- dropdown8 for office -->
+    <ul id="dropdown8" class="dropdown-content sec-menu grey-text">
+      <div class="row grey-text text-darken-3">
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 22</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 90</a>
+            <a href="#!" class="grey-text text-darken-3">Link 91</a>
+            <a href="#!" class="grey-text text-darken-3">Link 92</a>
+            <a href="#!" class="grey-text text-darken-3">Link 93</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 23</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 94</a>
+            <a href="#!" class="grey-text text-darken-3">Link 95</a>
+            <a href="#!" class="grey-text text-darken-3">Link 96</a>
+            <a href="#!" class="grey-text text-darken-3">Link 97</a>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="">
+            <h6 class="grey-text text-darken-3">Category 24</h6>
+            <a href="#!" class="grey-text text-darken-3">Link 98</a>
+            <a href="#!" class="grey-text text-darken-3">Link 99</a>
+            <a href="#!" class="grey-text text-darken-3">Link 100</a>
+            <a href="#!" class="grey-text text-darken-3">Link 101</a>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- Menu end -->
+  </nav>
+  {% endblock %}
+
+
+
+  {% block cart_block %}
+  <!-- cart -->
+  <!-- <div id='dropdown-cart' class="dropdown-content cart-button"> -->
+  <div id='dropdown-cart' class="card-panel grey lighten-5 z-depth-1 black-text left-align dropdown-content cart-button">
+    <div class="row valign-wrapper">
+      <div class="col s3 cart-pic">
+        <img src="{% static "images/product/product-1.png" %}" alt="" class="responsive-img">
+      </div>
+      <div class="col s7 title-with-price">
+        <h6>Headline</h6>
+        <span class="black-text">
+          <p>2 X 5000 BDT.</p>
+        </span>
+      </div>
+      <div class="col s3">
+        <a href="#"><i class="material-icons grey-text text-darken-2 center">delete</i></a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row valign-wrapper">
+      <div class="col s3 cart-pic">
+        <img src="{% static "images/product/product-1.png" %}" alt="" class="responsive-img">
+      </div>
+      <div class="col s7 title-with-price">
+        <h6>Headline</h6>
+        <span class="black-text">
+          <p>2 X 5000 BDT.</p>
+        </span>
+      </div>
+      <div class="col s3">
+        <a href="#"><i class="material-icons grey-text text-darken-2 center">delete</i></a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <p class="deliver-and-total">
+        <b>Delivery Charge:</b>
+        <span class="right">
+          <b>5,00</b> BDT
+        </span>
+      </p>
+      <p class="deliver-and-total">
+        <b>Grand Total:</b>
+        <span class="right">
+          <b>20,500</b> BDT
+        </span>
+      </p>
+    </div>
+
+    <div class="center">
+      <a class="waves-effect waves-light btn center-align grey darken-2" href="#!">view cart</a>
+      <a class="waves-effect waves-light btn center-align grey darken-2" href="#!">check out</a>
+      <br>
+    </div>
+  </div>
+  <!-- cart end -->
+  {% endblock %}
+
+
+
+
+
+  {% block carousel_block %}
+  <!-- carousel slider -->
+  <div class="carousel carousel-slider container" data-indicators="true">
+    <div class="slider">
+      <a class="carousel-item" href="#one!"><img src="{% static "images/slider/carousel-1.jpg" %}"></a>
+      <a class="carousel-item" href="#two!"><img src="{% static "images/slider/carousel-2.jpg" %}"></a>
+      <a class="carousel-item" href="#three!"><img src="{% static "images/slider/carousel-3.jpg" %}"></a>
+      <a class="carousel-item" href="#four!"><img src="{% static "images/slider/carousel-4.jpg" %}"></a>
+      <a class="carousel-item" href="#four!"><img src="{% static "images/slider/carousel-5.jpg" %}"></a>
+    </div>
+  </div>
+  <!-- carousel slider end -->
+  {% endblock %}
+
+
+
+  {% block new_product_list_block %}
+  <!-- product cards -->
+  <div class="container">
+    <div class="container">
+      <h4 class="center grey-text text-darken-3">
+        New Arrival
+      </h4>
+      <p class="center grey-text text-darken-3 text-flow top-align">The product you like most</p>
+    </div>
+
+
+    <div class="row">
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-6.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-1.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-2.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-3.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+            <!-- <div class="card-action center">
+          <a class="waves-effect waves-light btn red accent-2">view more</a>
+        </div> -->
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image image-ratio">
+              <img src="{% static "images/product/product-4.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image image-ratio">
+              <img src="{% static "images/product/product-5.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+    </div>
+  </div>
+  {% endblock %}
+
+
+  {% block product_list_block %}
+  <!-- product cards -->
+  <div class="container">
+    <div class="container">
+      <h4 class="center grey-text text-darken-3">
+        New Arrival
+      </h4>
+      <p class="center grey-text text-darken-3 text-flow top-align">The product you like most</p>
+    </div>
+
+
+    <div class="row">
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-6.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-1.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-2.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image">
+              <img src="{% static "images/product/product-3.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+            <!-- <div class="card-action center">
+          <a class="waves-effect waves-light btn red accent-2">view more</a>
+        </div> -->
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with new badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left green white-text">New</span></p>
+            <div class="card-image image-ratio">
+              <img src="{% static "images/product/product-4.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+
+
+      <!-- product card with discount badge-->
+      <a class="black-text" href="#">
+        <div class="col s6 m4 l4">
+          <div class="card z-depth-2 hoverable activator">
+            <p class="badge-padding"><span class=" badge left red white-text">-15%</span></p>
+            <div class="card-image image-ratio">
+              <img src="{% static "images/product/product-5.png" %}" class="">
+            </div>
+            <div class="card-content">
+              <p class="center"><strong>Table-Chair</strong></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- product card end -->
+    </div>
+  </div>
+  {% endblock %}
+
+
+  {% block footer_block %}
+  <!-- footer -->
+  <footer class="page-footer grey lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 m12 s12">
+          <h4 class="grey-text text-darken-3"> <b>BMTF Furniture</b> </h4>
+          <p class="blue-grey-text text-darken-3">A state owned limited company under the management of Bangladesh Army. BMTF Furniture is bringing you the best prices and widest selection of furniture and home décor that fits your lifestyle.</p>
+
+          <!-- <h5 class="black-text">Links</h5> -->
+          <br><br>
+          <ul>
+            <li><a class="black-text text-lighten-3" href="#!">About us</a></li>
+            <li><a class="black-text text-lighten-3" href="#!">Contact us</a></li>
+            <li><a class="black-text text-lighten-3" href="#!">Meet the team</a></li>
+            <li><a class="black-text text-lighten-3" href="#!">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- contact info -->
+        <div class="col s12 m6 l4">
+          <h5 class="grey-text text-darken-3">Contact us</h5>
+
+          <div class="">
+            <div id="contact-us" class="row">
+              <div class="col">
+                <i class="material-icons center-align grey-text text-darken-3">home</i>
+              </div>
+              <div class="col valign-wrapper grey-text text-darken-3">
+                <b>Address:</b>
+              </div>
+            </div>
+            <blockquote class="blue-grey-text text-darken-3">
+              Bangladesh Machine Tools Factory Limited(BMTF), Shimultoli, Joydebpur, Gazipur-1700, Dhaka.
+            </blockquote>
+          </div>
+
+          <div class="">
+            <div id="contact-us" class="row">
+              <div class="col">
+                <i class="material-icons grey-text text-darken-3">email</i>
+              </div>
+              <div class="col valign-wrapper grey-text text-darken-3">
+                <b>Email:</b>
+              </div>
+            </div>
+            <blockquote class="blue-grey-text text-darken-3">
+              <a href="mailto:furniture.bmtf@gmail.com" class="blue-grey-text text-darken-3">furniture.bmtf@gmail.com</a>
+            </blockquote>
+          </div>
+
+          <div class="">
+            <div id="contact-us" class="row">
+              <div class="col">
+                <i class="material-icons grey-text text-darken-3">call</i>
+              </div>
+              <div class="col valign-wrapper grey-text text-darken-3">
+                <b>Phone:</b>
+              </div>
+            </div>
+            <blockquote class="blue-grey-text text-darken-3">
+              <a href="tel:+88017123456789" class="blue-grey-text text-darken-3">01712-3456789</a>
+            </blockquote>
+          </div>
+
+
+          <div class="">
+            <div id="contact-us" class="row">
+              <div class="col">
+                <i class="material-icons grey-text text-darken-3">access_time</i>
+              </div>
+              <div class="col valign-wrapper grey-text text-darken-3">
+                <b>Opening Hours:</b>
+              </div>
+            </div>
+            <blockquote class="blue-grey-text text-darken-3">
+              Saturday - Thursday <br>
+              10.00 AM - 8.00 PM <br>
+              (Except Holidays)
+            </blockquote>
+          </div>
+        </div>
+        <!-- contact info end-->
+
+        <div class="col s12 m6 l4">
+          <h5 class="grey-text text-darken-3">Newsletter</h5>
+          <p class="blue-grey-text text-darken-3">Sign up to our newsletter to get the latest articles, lookbooks voucher codes direct to your inbox </p>
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field prefix col m9">
+                  <i class="material-icons prefix grey-text text-darken-3">email_outlined</i>
+                  <input id="email" type="email" class="validate">
+                  <label class="blue-grey-text text-darken-3" for="email">Email Address</label>
+                </div>
+                <div class="input-field col m3">
+                  <button class="btn waves-effect waves-light grey darken-3" type="submit" name="action">Subscribe
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- payment system -->
+            <div class="col s12">
+              <h5 class="grey-text text-darken-3">Payment Accept</h5>
+              <img class="responsive-img" src="{% static "image/payment.png" %}" alt="payment">
+
+            </div>
+
+            <!-- social network -->
+            <div class="col s12">
+              <h5 class="grey-text text-darken-3">Follow us on</h5>
+              <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/color/48/000000/twitter-squared.png" /></a>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container grey-text text-darken-2 center">
+        © 2020 Copyright <a class="brown-text text-darken-3" href="https://bmtf.com.bd" target="_blank">Bangladesh Machine Tools Factory Limited</a>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  {% endblock %}
+
+
+
+  <script type="text/javascript" src="{% static "js/jquery-3.5.0.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/materialize.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/custom.js" %}"></script>
+
+
+</body>
+
+</html>
