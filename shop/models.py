@@ -15,6 +15,8 @@ class Product(models.Model):
     product_model = models.CharField(max_length=150, null=True)
     product_description = models.TextField(blank=True)
     product_dimension = models.TextField(blank=True)
+    product_color_finish = models.TextField(blank=True)
+    product_material = models.TextField(blank=True)
     product_image = models.ImageField(upload_to='product/')
     price = models.PositiveIntegerField(null=True)
     discount_price = models.PositiveIntegerField(null=True)
